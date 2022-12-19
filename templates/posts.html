@@ -1,0 +1,67 @@
+
+{% extends "base.html" %} {% block content %} {% load static %}
+<section class="content">
+    <div class="header">
+        <img src="{% static 'img/twitterlogo.png' %}" style="width:60px" />
+        <h3>Home</h3>
+    </div>
+    <section class="posts_form">
+        <div class="logo">
+            <img src="{% static 'img/santa-claus.png' %}">
+        </div>
+        <form action="/" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input class="name_box" type="text" name="name" placeholder="Name" required>
+            <textarea name="body" placeholder="Tell us anything" required></textarea>
+            <input type="file" name="image" required/>
+            <input class="button" type="submit" value="Tweet" />
+        </form>
+    </section>
+    
+    <section class="posts">
+       <ul>
+        {% for post in posts %}
+          <li>
+            <img class="menu_icon js-menu-icon" src="{% static 'img/menu.png' %}" />
+            <div class="menu">
+
+                <a href="/edit/{{ post.id }}/">Edit</a>
+                <br>
+                <a href="/delete/{{post.id}}">Delete</a>
+            </div>
+           
+            <div class="logo">
+                <img src="{% static 'img/santa-claus.png' %}">
+            </div>
+            <div class="name_body">
+               <div class='name'>{{post.name}}</div>
+               <div class='datetime'>{{post.created_at}}</div>
+               <br>
+               <p>{{post.body}}</p>
+               <br>
+               {% if post.image %}
+               <div class="body_pic">
+               <img class="post-border" src="{{post.image.url}}">
+                </div> 
+               {% endif %}
+
+            
+                <a href="/like/{{post.id}}/">
+                    <img id="like" src="{%static 'img/like.png'%}" > 
+                </a>
+                {{post.likes}}
+                </div>
+                </div>
+                </div>
+            </div>
+           
+
+          </li>
+          {% endfor %}
+       
+       </ul> 
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="{% static 'js/posts.js' %}"></script>
+</section>
+{% endblock %}

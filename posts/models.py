@@ -21,6 +21,9 @@ class Post(models.Model):
         'Created Datetime', blank= True, auto_now=True
     )
     likes= models.PositiveIntegerField('like count', default=0, null=True, blank=True)
+
+    def __str__(self):
+        return self.name
     
     
 

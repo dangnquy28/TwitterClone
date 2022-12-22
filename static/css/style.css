@@ -54,10 +54,10 @@ posts
 form 
 */
 
-.post_form {
+/*.post_form {
     padding: 20px 40px;
     border-bottom: 1px solid #ccc;
-}
+}*/
 
 .posts li .menu_icon {
     width: 20px;
@@ -98,19 +98,8 @@ override
 
 
 
-.content {
-        text-align: left;
-        max-width: 600px;
-        height: 100%;
-        margin: 0 auto;
-        border-left: 1px solid #ccc;
-        border-right: 1px solid #ccc;
-}
 
-/*
-Post
-************/
-
+/*edit**********/
 .header {
     display: flex;
     align-items: center;
@@ -118,30 +107,77 @@ Post
     gap: 2%;
     border-bottom: 1px solid #ccc;
 }
+.content_edit{
+    text-align: left;
+    max-width: 600px;
+    height: 9vw;
+    margin: 0 auto;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    align-items: center;
+   
+}
+.content_edit img{
+    width: 14%;
+}
+.content {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+  
+}
+input.upload-file {
+    margin-top: 0;
+    padding: 3vw;
+    
+    padding-bottom: 3vw;
+    padding-top: 1vw;
+    
+}
 .header img{
     padding-left: 20px;
 }
+
+/*
+Post
+************/
+
+
+.header img{
+    padding-left: 15px;
+}
+a {
+    text-decoration: none;
+}
 .posts_form {
-    padding: 10px 20px;
-    border-bottom: 13px solid lightgrey;
-    display:flex;
+        padding: 14px 0px;
+        border-bottom: 13px solid lightgrey;
+        display: flex;
+        max-width: 600px;
+        margin: -6px auto;
+        margin-top: 0;
       
 }
-.posts_form .logo img{
-    width: 80%;  
+.posts_form .logo img {
+    width: 60%;
+    padding-left: 2vw;
 }
 .posts_form .logo {
     flex-basis: 15%;
 }
 
 .posts_form input {
-    width:70%;
+    width: 70%;
     margin-bottom: 10px;
-    padding: 10px;
-    border: none;
+    padding: 7px;
+    border: 1px solid #ccc;
     background-color: aquamarine;
-    border-radius: 10%; 
-    flex-basis: 85%; 
+    border-radius: 1.2VW;
 }
 
 
@@ -185,13 +221,14 @@ Post
 .posts li .menu a {
    text-decoration: none; 
 }
-.posts li .logo{
-    flex-basis: 15%;
-    padding-left: 15px;
-    padding-top: 15px;
+.posts li .logo {
+    flex-basis: 12%;
+    padding-left: 5%;
+    padding-top: 2%;
 }
 .posts li .name_body{
     flex-basis: 85%;
+    padding: 1.5vw;
 }
 .posts li .logo img{
     width: 60%;
@@ -206,15 +243,76 @@ Post
    
 
 img.post-border {
-    margin-left:2vw;
+    margin-left:15%;
     width: 25vw;
     height: 15vw;
+    margin-bottom: 2vw;
 }
 img#like {
     width: 2vw;
+}
+.like_count{
+    padding-bottom: 1vw;
 }
 @media screen and (max-width: 500px){
     .posts li .name_body .name {
         font-size: 20px;
     }
+}
+.button {
+    display: flex;
+    height:3.5vw;
+}
+section.posts {
+    
+    border-top: none;
+    margin-top: -2vw;
+    padding-top: 1vw;
+}
+
+.posts_form1 {
+    padding: 14px 0px;
+    border-bottom: 13px solid lightgrey;
+    display: flex;
+    max-width: 600px;
+    margin: -6px auto;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    margin-top: 0;
+  
+}
+.posts_form1 .logo img {
+width: 60%;
+padding-left: 2vw;
+}
+.posts_form1 .logo {
+flex-basis: 15%;
+}
+
+.posts_form1 input {
+    width: 70%;
+    margin-bottom: 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    background-color: aquamarine;
+    border-radius: 1.2VW;
+}
+
+
+.posts_form1 input .name_box{
+background-color: aquamarine;
+}
+.posts_form1 textarea{
+width:70%;
+border: none;
+padding: 10px;
+}
+.btns{
+    margin-top: 1vw;
+}
+.button .upload-file{
+    padding-bottom: 3vw;
+}
+.button_tweet{
+    width: 16vw;
 }
